@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="cadastro.css">
 </head>
+
 <body>
     <a id="btn-home" href="index.html">Home</a>
 
     <div class="z-depth-4" id="container">
         <h1>Cadastro</h1>
-        <form action="#" method="post">
-            <input type="text" name="nome" placeholder="Nome completo" required>
-            <input type="email" name="email" placeholder="Endereço de e-mail" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <input type="password" name="confirmar_senha" placeholder="Confirmar senha" required>
+        <form id="registro" action="#" method="post">
+            <input type="text" name="nome" id="username" placeholder="Nome completo" required>
+            <input type="email" name="email" id="email" placeholder="Endereço de e-mail" required>
+            <input type="password" name="senha" id="password" placeholder="Senha" required>
+            <input type="password" name="confirmar_senha" id="confirmaSenha" placeholder="Confirmar senha" required>
             <input id="cadastro" type="submit" value="Cadastrar">
         </form>
     </div>
-    
-    
-    
+
+    <script src="cadastro.js"></script>
 </body>
+
 </html>
