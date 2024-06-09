@@ -9,6 +9,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
     if (username === storedUsername && password === storedPassword) {
         window.location.href = "index.html";
+        alert("Logado com sucesso !")
     } else {
         alert('Credenciais inválidas. Por favor, tente novamente.');
     }
