@@ -53,9 +53,7 @@ h2:hover {
     font-family: 'Apple Chancery';
     font-size: 2rem; 
     border-radius: 2rem;
-}
-
-
+} 
 
 #botaoPrincipal:hover {
     background-color: #f34c52;
@@ -137,9 +135,18 @@ div.bloco2 {
 .div-b5 {
     margin: 10px;
 }
+
+#site {
+    margin-left: 8rem;
+}
+
+#img-site{
+    width: 2rem;
+    height: 2rem;
+}
 .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
     margin-top: 0.8rem;
 }
 .img-academy {
