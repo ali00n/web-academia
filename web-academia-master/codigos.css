@@ -1,12 +1,1 @@
-#btn-home {
-    display: block;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+#btn-home{padding:10px;background-color:#007bff;color:#fff;text-align:center;border-radius:5px;margin-top:20px;display:flex;justify-content:center;align-items:center}

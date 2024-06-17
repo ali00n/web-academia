@@ -1,16 +1,1 @@
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-
-    if (username === storedUsername && password === storedPassword) {
-        window.location.href = "index.html";
-        alert("Logado com sucesso !")
-    } else {
-        alert('Credenciais inválidas. Por favor, tente novamente.');
-    }
-});
+document.getElementById('form').addEventListener('submit',function(event){event.preventDefault();const e=document.getElementById('username').value,t=document.getElementById('password').value,n=localStorage.getItem('username'),o=localStorage.getItem('password');e===n&&t===o?(window.location.href="index.html",alert("Logado com sucesso !")):alert('Credenciais inválidas. Por favor, tente novamente.')});
