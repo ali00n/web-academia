@@ -6,10 +6,5 @@
             "source": "/api/(.*)",
             "destination": "/server/server.js"
         }
-    ],
-    "env": {
-        "DATABASE_URL": "@database_url",
-        "DIRECT_URL": "@direct_url",
-        "JWT_SECRET": "@jwt_secret"
-    }
+    ]
 }
