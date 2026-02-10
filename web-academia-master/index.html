@@ -4,110 +4,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABF</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Academia Black Fitness - Transforme Seu Corpo</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center"><img src="img/icone-academia.png" alt="icone-academia"></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a class="white-text text-darken-4" href="index1.html">Sobre nós</a></li>
-        <li><a href="codigosite.html">Codigos</a></li>
-        <li><a href="calcIMC.html">Calculo IMC</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="app">
+    <!-- Header will be injected here -->
 
-  <div>
-    <div id="btnPrincipal">
-      <button class="waves-effect waves-light btn" id="botaoPrincipal">Menu</button>
-    </div>
-    <div id="listaBotoes">
-      <button id="btn-lista"><a class="white-text text-darken-4" href="login.html">Login</a></button>
-      <button id="btn-lista"><a class="white-text text-darken-4" href="cadastro.html">Cadastro</a></button>
-      <button id="btn-lista"><a class="white-text text-darken-4" href="index1.html">Sobre nós</a></button>
-      <button id="btn-lista"><a class="white-text text-darken-4" href="calcIMC.html">Calculadora IMC</a></button>
-    </div>
-  </div>
-
-  <div class="bloco1">
-    <img id="img0" src="img/img1-academia.jpg" alt="img0">
-    <img id="img0" src="img/img2-academia.jpg" alt="img1">
-    <img id="img0" src="img/img3-academia.jpg" alt="img2">
-  </div>
-  <div class="bloco2">
-    <h2 id="Academia-text" class="z-depth-2">Academia Black Fitness</h2>
-    <p>Bem-vindo à Black Fitness Academia, seu centro de excelência em fitness e bem-estar! Nossa academia foi
-      projetada para oferecer um ambiente estimulante e acolhedor, onde você possa atingir seus objetivos de
-      condicionamento físico de maneira eficaz.</p>
-  </div>
-
-
-  <div class="container">
-    <img id="img0" src="img/img2-academia.jpg" alt="Imagem0">
-    <img id="img0" src="img/img3-academia.jpg" alt="Imagem1">
-    <img id="img0" src="img/img1-academia.jpg" alt="Imagem2">
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Horario de funcionamento:</th>
-        <th>Aos domingos e feriados:</th>
-        <th>Telefone:</th>
-        <th>Endereço:</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>Abre as: 8:00</td>
-        <td>Abre as: 8:00</td>
-        <td>4444-4444</td>
-        <td>Rua Maria Alvim Fazzio - Atibaia</td>
-      </tr>
-      <tr>
-        <td>Fecha as: 20:00</td>
-        <td>Fecha as: 12:00</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Academia Black Fitness</h5>
-          <p class="grey-text text-lighten-4">O melhor da academia para você.</p>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-modern">
+        <div class="hero-content">
+          <div class="hero-badge">💪 #1 Academia em Atibaia</div>
+          <h1 class="hero-title">
+            Transforme Seu <span class="gradient-text">Corpo</span><br>
+            Transforme Sua <span class="gradient-text">Vida</span>
+          </h1>
+          <p class="hero-subtitle">
+            Alcance seus objetivos com equipamentos de última geração,
+            treinadores especializados e uma comunidade motivada.
+          </p>
+          <div class="hero-cta">
+            <a href="cadastro.html" class="btn-primary-large">
+              <span>Começar Agora</span>
+              <i class="material-icons">arrow_forward</i>
+            </a>
+            <a href="calcIMC.html" class="btn-secondary-large">
+              <i class="material-icons">calculate</i>
+              <span>Calcular IMC</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Membros Ativos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Satisfação</div>
+            </div>
+          </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Contato</a></li>
-            <li><a class="grey-text text-lighten-3" href="index1.html">Sobre Nós</a></li>
-          </ul>
+      </section>
+
+      <!-- Features Section -->
+      <section class="container features-section">
+        <div class="section-header">
+          <h2>Por Que Escolher a Black Fitness?</h2>
+          <p>Oferecemos tudo que você precisa para alcançar seus objetivos</p>
         </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <p id="site">Site desenvolvido por Alisson Ribeiro</p><img id="img-site" src="./img/programador.png" alt="">
-      <div class="container">
-        Copyright © 2024 Academia Black Fitness
-        <a class="grey-text text-lighten-4 right" href="https://github.com/ali00n">GitHub</a><img id="img-site" src="./img/github.png" alt="">
-        <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/alisson-ribeiro-b3366b1a7/">LinkedIn</a><img id="img-site" src="./img/linkedin.png" alt="">
-      </div>
-    </div>
-  </footer>
 
-  <button><a href="#top" class="scroll-to-top" class="scroll-">Voltar ao topp</a></button>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="material-icons">fitness_center</i>
+            </div>
+            <h3>Equipamentos Modernos</h3>
+            <p>Aparelhos de última geração para treinos completos e eficientes</p>
+          </div>
 
-  <script src="index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="material-icons">groups</i>
+            </div>
+            <h3>Treinadores Certificados</h3>
+            <p>Profissionais qualificados para orientar sua jornada fitness</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="material-icons">schedule</i>
+            </div>
+            <h3>Horários Flexíveis</h3>
+            <p>Aberto de segunda a domingo para se adaptar à sua rotina</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="material-icons">workspace_premium</i>
+            </div>
+            <h3>Planos Personalizados</h3>
+            <p>Treinos customizados para suas necessidades e objetivos</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Section -->
+      <section class="container info-modern">
+        <div class="info-card">
+          <div class="info-header">
+            <i class="material-icons">access_time</i>
+            <h3>Horários de Funcionamento</h3>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Segunda a Sábado</span>
+              <span class="info-value">08:00 - 20:00</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Domingos e Feriados</span>
+              <span class="info-value">08:00 - 12:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-header">
+            <i class="material-icons">location_on</i>
+            <h3>Localização & Contato</h3>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Endereço</span>
+              <span class="info-value">Rua Maria Alvim Fazzio - Atibaia</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Telefone</span>
+              <span class="info-value">(11) 4444-4444</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Pronto para Começar?</h2>
+            <p>Venha fazer parte da nossa comunidade e transforme sua vida hoje mesmo!</p>
+            <a href="cadastro.html" class="btn-primary-large">
+              <span>Cadastre-se Grátis</span>
+              <i class="material-icons">arrow_forward</i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer will be injected here -->
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

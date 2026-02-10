@@ -1,0 +1,40 @@
+:root {
+    /* Dark Theme Colors */
+    --primary-color: #ff5757;
+    --primary-dark: #e63946;
+    --primary-light: #ff6b6b;
+    --accent-color: #00d9ff;
+    --secondary-color: #1a1a2e;
+    --text-color: #e8e8e8;
+    --text-muted: #a0a0a0;
+    --bg-color: #0f0f1e;
+    --bg-secondary: #16213e;
+    --bg-card: #1a1f3a;
+    --white: #ffffff;
+    --gray-dark: #2a2a3e;
+    --gray-light: #3a3a4e;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #ff5757 0%, #e63946 100%);
+    --gradient-accent: linear-gradient(135deg, #00d9ff 0%, #0099ff 100%);
+    --gradient-dark: linear-gradient(180deg, #0f0f1e 0%, #1a1a2e 100%);
+
+    /* Typography */
+    --font-main: 'Inter', 'Roboto', sans-serif;
+    --font-display: 'Poppins', 'Open Sans', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Borders */
+    --border-radius: 12px;
+    --border-radius-lg: 20px;
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(255, 87, 87, 0.3);
+}

@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique @db.VarChar(50)
+  email     String   @unique @db.VarChar(100)
+  password  String   @db.VarChar(255)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  memberProfile MemberProfile?
+  attendances   Attendance[]
+
+  @@map("users")
+}
+
+model MemberProfile {
+  id               Int      @id @default(autoincrement())
+  userId           Int      @unique @map("user_id")
+  fullName         String   @map("full_name") @db.VarChar(100)
+  age              Int
+  weight           Decimal  @db.Decimal(5, 2)
+  height           Decimal? @db.Decimal(5, 2)
+  trainingGoal     String   @map("training_goal") @db.VarChar(50)
+  selectedPlan     String   @map("selected_plan") @db.VarChar(20)
+  paymentMethod    String   @map("payment_method") @db.VarChar(20)
+  registrationDate DateTime @default(now()) @map("registration_date")
+  updatedAt        DateTime @default(now()) @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("member_profiles")
+}
+
+model Attendance {
+  id        Int              @id @default(autoincrement())
+  userId    Int              @map("user_id")
+  date      DateTime         @db.Date
+  status    AttendanceStatus @default(present)
+  createdAt DateTime         @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date], name: "unique_attendance")
+  @@map("attendance")
+}
+
+enum AttendanceStatus {
+  present
+  absent
+}

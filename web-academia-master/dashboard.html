@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete seu Cadastro - Black Fitness</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header will be injected here -->
+
+        <main class="dashboard-container">
+            <div class="onboarding-wrapper">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Dados Pessoais</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Objetivos</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Plano</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-label">Pagamento</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Steps -->
+                <form id="onboardingForm" class="onboarding-form">
+
+                    <!-- Step 1: Personal Info -->
+                    <div class="form-step active" data-step="1">
+                        <div class="step-header">
+                            <h2>Dados Pessoais</h2>
+                            <p>Precisamos de algumas informações básicas</p>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fullName">Nome Completo *</label>
+                            <input type="text" id="fullName" name="fullName" required
+                                placeholder="Digite seu nome completo">
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="age">Idade *</label>
+                                <input type="number" id="age" name="age" required min="14" max="120"
+                                    placeholder="Ex: 25">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="weight">Peso (kg) *</label>
+                                <input type="number" id="weight" name="weight" required min="30" max="300" step="0.1"
+                                    placeholder="Ex: 70.5">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-next" onclick="nextStep()">
+                                Próximo
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Training Goals -->
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <h2>Objetivo do Treino</h2>
+                            <p>O que te motiva a treinar?</p>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="trainingGoal">Selecione seu objetivo principal *</label>
+                            <select id="trainingGoal" name="trainingGoal" required>
+                                <option value="">Escolha uma opção</option>
+                                <option value="health">Por saúde</option>
+                                <option value="hobby">Por hobbie</option>
+                                <option value="sport">Para praticar esporte</option>
+                                <option value="weight-loss">Perda de peso</option>
+                                <option value="muscle-gain">Ganho de massa muscular</option>
+                                <option value="conditioning">Condicionamento físico</option>
+                                <option value="quality-life">Qualidade de vida</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="prevStep()">
+                                <i class="material-icons">arrow_back</i>
+                                Voltar
+                            </button>
+                            <button type="button" class="btn-next" onclick="nextStep()">
+                                Próximo
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Plan Selection -->
+                    <div class="form-step" data-step="3">
+                        <div class="step-header">
+                            <h2>Escolha Seu Plano</h2>
+                            <p>Selecione o plano ideal para você</p>
+                        </div>
+
+                        <div class="plans-grid">
+                            <div class="plan-card" data-plan="basic">
+                                <div class="plan-badge">BÁSICO</div>
+                                <div class="plan-price">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">99</span>
+                                    <span class="cents">,90</span>
+                                    <span class="period">/mês</span>
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="material-icons">check_circle</i> Acesso à área de musculação</li>
+                                    <li><i class="material-icons">check_circle</i> Vestiários e armários</li>
+                                    <li><i class="material-icons">check_circle</i> Horários flexíveis</li>
+                                </ul>
+                                <button type="button" class="btn-select-plan" onclick="selectPlan('basic')">Selecionar
+                                    Plano</button>
+                            </div>
+
+                            <div class="plan-card featured" data-plan="plus">
+                                <div class="plan-badge popular">MAIS POPULAR</div>
+                                <div class="plan-price">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">130</span>
+                                    <span class="cents">,90</span>
+                                    <span class="period">/mês</span>
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="material-icons">check_circle</i> Tudo do plano Básico</li>
+                                    <li><i class="material-icons">check_circle</i> Aulas coletivas</li>
+                                    <li><i class="material-icons">check_circle</i> Avaliação física mensal</li>
+                                    <li><i class="material-icons">check_circle</i> Acesso a zona funcional</li>
+                                </ul>
+                                <button type="button" class="btn-select-plan" onclick="selectPlan('plus')">Selecionar
+                                    Plano</button>
+                            </div>
+
+                            <div class="plan-card" data-plan="premium">
+                                <div class="plan-badge">PREMIUM</div>
+                                <div class="plan-price">
+                                    <span class="currency">R$</span>
+                                    <span class="amount">200</span>
+                                    <span class="cents">,00</span>
+                                    <span class="period">/mês</span>
+                                </div>
+                                <ul class="plan-features">
+                                    <li><i class="material-icons">check_circle</i> Tudo do plano Plus</li>
+                                    <li><i class="material-icons">check_circle</i> Personal trainer 2x/semana</li>
+                                    <li><i class="material-icons">check_circle</i> Nutricionista</li>
+                                    <li><i class="material-icons">check_circle</i> Acesso convidado mensal</li>
+                                    <li><i class="material-icons">check_circle</i> Prioridade em aulas</li>
+                                </ul>
+                                <button type="button" class="btn-select-plan" onclick="selectPlan('premium')">Selecionar
+                                    Plano</button>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="selectedPlan" name="selectedPlan" required>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="prevStep()">
+                                <i class="material-icons">arrow_back</i>
+                                Voltar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Payment Method -->
+                    <div class="form-step" data-step="4">
+                        <div class="step-header">
+                            <h2>Forma de Pagamento</h2>
+                            <p>Como você prefere pagar?</p>
+                        </div>
+
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="pix" required>
+                                <div class="payment-card">
+                                    <i class="material-icons">qr_code_2</i>
+                                    <span>PIX</span>
+                                    <small>Aprovação instantânea</small>
+                                </div>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="credit">
+                                <div class="payment-card">
+                                    <i class="material-icons">credit_card</i>
+                                    <span>Cartão de Crédito</span>
+                                    <small>Parcelamento disponível</small>
+                                </div>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="debit">
+                                <div class="payment-card">
+                                    <i class="material-icons">payment</i>
+                                    <span>Cartão de Débito</span>
+                                    <small>Débito automático</small>
+                                </div>
+                            </label>
+
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="cash">
+                                <div class="payment-card">
+                                    <i class="material-icons">attach_money</i>
+                                    <span>Dinheiro</span>
+                                    <small>Pagamento na recepção</small>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-back" onclick="prevStep()">
+                                <i class="material-icons">arrow_back</i>
+                                Voltar
+                            </button>
+                            <button type="submit" class="btn-submit">
+                                <i class="material-icons">check_circle</i>
+                                Finalizar Cadastro
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer will be injected here -->
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/dashboard.js"></script>
+</body>
+
+</html>
