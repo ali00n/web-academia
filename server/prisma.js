@@ -4,13 +4,13 @@ const prisma = new PrismaClient({
     log: ['query', 'error', 'warn'],
 });
 
-// Test connection
+// Testando conexão com o banco de dados
 prisma.$connect()
     .then(() => {
-        console.log('✅ Prisma connected to MySQL database');
+        console.log('✅ Prisma conectado !');
     })
     .catch((error) => {
-        console.error('❌ Error connecting to database:', error);
+        console.error('❌ Erro em conectar ao banco:', error);
         process.exit(1);
     });
 

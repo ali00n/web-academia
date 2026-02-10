@@ -24,6 +24,18 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'OK', message: 'Academia Black Fitness API is running' });
 });
 
+// Stats endpoint (public)
+app.get('/api/stats', async (req, res) => {
+    try {
+        const prisma = (await import('./prisma.js')).default;
+        const totalUsers = await prisma.user.count();
+        res.json({ totalMembers: totalUsers });
+    } catch (error) {
+        console.error('Error fetching stats:', error);
+        res.status(500).json({ error: 'Erro ao buscar estatísticas' });
+    }
+});
+
 // 404 handler
 app.use((req, res) => {
     res.status(404).json({ error: 'Endpoint não encontrado' });

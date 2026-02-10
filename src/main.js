@@ -1,6 +1,8 @@
 import './styles/main.css';
+import './styles/whatsapp.css';
 import { Header } from './components/Header.js';
 import { Footer } from './components/Footer.js';
+// import './updateStats.js'; // Dynamic member counter (commented - backend not running)
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = document.querySelector('#app');
