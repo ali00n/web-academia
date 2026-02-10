@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-bg-dark text-text-color;
+    }
+}
+
+@layer utilities {
+    .gradient-primary {
+        background: linear-gradient(135deg, #FF5757 0%, #FF8787 100%);
+    }
+
+    .gradient-dark {
+        background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+    }
+}

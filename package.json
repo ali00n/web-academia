@@ -1,19 +1,38 @@
 {
   "name": "web-academia",
-  "version": "1.0.0",
-  "description": "Website for Academia Black Fitness",
-  "type": "module",
+  "version": "2.0.0",
+  "description": "Academia Black Fitness - Next.js",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "server": "node server/server.js",
     "prisma:generate": "cd server && npx prisma generate",
     "prisma:push": "cd server && npx prisma db push",
-    "prisma:studio": "cd server && npx prisma studio",
-    "vercel-build": "npm run prisma:generate && npm run build"
+    "prisma:studio": "cd server && npx prisma studio"
+  },
+  "dependencies": {
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "@prisma/client": "5.22.0"
   },
   "devDependencies": {
-    "vite": "^7.3.1"
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.0",
+    "typescript": "^5",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "prisma": "5.22.0"
   }
 }
