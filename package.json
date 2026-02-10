@@ -1,0 +1,19 @@
+{
+  "name": "web-academia",
+  "version": "1.0.0",
+  "description": "Website for Academia Black Fitness",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/server.js",
+    "prisma:generate": "cd server && npx prisma generate",
+    "prisma:push": "cd server && npx prisma db push",
+    "prisma:studio": "cd server && npx prisma studio",
+    "vercel-build": "npm run prisma:generate && npm run build"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
